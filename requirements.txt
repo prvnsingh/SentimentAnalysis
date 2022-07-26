@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+torch
+transformers
+numpy
+pandas
+torchvision
+sklearn
