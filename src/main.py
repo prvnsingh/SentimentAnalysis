@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from transformers import pipeline, AutoTokenizer, AutoModelForSequenceClassification
-from train import model_name
+model_name = "distilbert-base-uncased-finetuned-sst-2-english"
 
 app = FastAPI()
 
