@@ -8,9 +8,9 @@ class AirlineDataset(Dataset):
         self.labels = labels
 
     def __getitem__(self, idx):
-        item['input_ids'] = torch.tensor(self.encodings['input_ids'][idx])
-        item['labels'] = torch.tensor(self.labels[idx])
-        return item
+        input_ids = torch.tensor(self.encodings['input_ids'])
+        target_ids = torch.tensor(self.labels[idx])
+        return {"input_ids": input_ids, "labels": target_ids}
 
     def __len__(self):
         return len(self.labels)
